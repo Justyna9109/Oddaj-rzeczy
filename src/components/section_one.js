@@ -1,11 +1,13 @@
 import React,{Component} from 'react';
+import Three_columns from './three_colums.js'
 import {
     Link,
 } from 'react-router-dom';
 
 class Section_one extends Component{
     render() {
-        return( <section className='one'>
+        return( <>
+            <section className='one'>
                 <div className='two_columns'>
                     <img className='hero' src='/src/assets/Home-Hero-Image.jpg'/>
 
@@ -23,6 +25,10 @@ class Section_one extends Component{
 
                 </div>
             </section>
+
+            <Three_columns/>
+
+            </>
 
         )
     }
