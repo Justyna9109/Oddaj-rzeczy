@@ -1,0 +1,92 @@
+.four_steps {
+  position: relative;
+  .title-four {
+    text-align: center;
+    font-size: 30px;
+    padding: 20px;
+  }
+  .decoration{
+    position: absolute;
+    right: 475px;
+  }
+}
+
+.four-columns{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 70px;
+  background-color: $color_one;
+  position: relative;
+  .box-first, .box-two, .box-three, .box-four {
+    width: 10vw;
+    margin-bottom: 80px;
+    .icon, .icon2, .icon3, .icon4{
+      position: absolute;
+      top: 0;
+      margin-top: 80px;
+    }
+    .steps{
+      margin-top: 180px;
+      text-align: center;
+      font-size: 16px;
+    }
+    .line, .line2, .line3, .line4{
+      position: absolute;
+    }
+    p{
+      margin-top: 15px;
+      text-align: center;
+    }
+  }
+}
+
+.icon{
+  left: 260px;
+}
+.icon2{
+  left: 475px;
+}
+.icon3{
+  right: 430px;
+}
+.icon4{
+  right: 220px;
+}
+
+.box-first{
+  margin-left: 200px;
+}
+
+.box-four{
+  margin-right: 150px;
+}
+
+.line{
+  left: 275px;
+}
+.line2{
+  left: 485px;
+}
+.line3{
+  right: 440px;
+}
+.line4{
+  right: 225px;
+}
+
+.back-things{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 80px;
+  p {
+    border: 1px solid $color_five;
+    text-align: center;
+    font-size: 30px;
+    width: 16vw;
+    a{
+      text-decoration: none;
+      color: $color_five;
+    }
+  }
+}

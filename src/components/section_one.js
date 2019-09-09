@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
-import Three_columns from './three_colums.js'
+import Three_columns from './three_colums.js';
+import Four_steps from './four_steps.js';
 import {
     Link,
 } from 'react-router-dom';
@@ -27,6 +28,7 @@ class Section_one extends Component{
             </section>
 
             <Three_columns/>
+            <Four_steps/>
 
             </>
 
