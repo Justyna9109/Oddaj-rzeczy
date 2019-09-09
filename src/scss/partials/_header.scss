@@ -1,0 +1,63 @@
+header{
+  background-color: white;
+}
+
+.menu, .menu1{
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  padding: 20px;
+}
+
+.anime, .anime1{
+  color: $color_five;
+  text-decoration: none;
+  margin-left: 30px;
+}
+
+.anime1{
+  border: 1px solid $color_three;
+  padding: 6px;
+}
+
+.menu1{
+  li{
+    margin-left: 30px;
+  }
+}
+
+.hero{
+  width: 40vw;
+  height: 80vh;
+}
+
+.two_columns{
+  display: flex;
+  justify-content: space-around;
+  p{
+    font-size: 25px;
+    margin-bottom: 15px;
+  }
+}
+
+.text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.box{
+  display: flex;
+  justify-content: space-between;
+  p{
+    border: 1px solid $color_five;
+    width: 215px;
+    margin-top: 40px;
+    padding: 10px;
+    a{
+      text-decoration: none;
+      color: $color_five;
+    }
+  }
+}
