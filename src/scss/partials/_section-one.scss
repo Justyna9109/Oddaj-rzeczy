@@ -1,0 +1,22 @@
+.three_columns{
+  display: flex;
+  justify-content: space-around;
+  background-color: $color_three;
+}
+
+.one_column, .two_column, .three_column {
+  text-align: center;
+  padding: 30px;
+  span{
+    font-size: 75px;
+  }
+  .title{
+    font-size: 18px;
+    font-weight: bold;
+    padding: 20px;
+  }
+  .lorem{
+    font-size: 16px;
+    padding: 20px;
+  }
+}
