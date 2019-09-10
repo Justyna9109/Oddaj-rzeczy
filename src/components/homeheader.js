@@ -2,6 +2,7 @@ import React,{Component} from 'react';
 import {
     NavLink,
 } from 'react-router-dom';
+import {Link,} from 'react-scroll';
 
 
 class HomeHeader extends Component{
@@ -13,11 +14,11 @@ class HomeHeader extends Component{
                     </ul>
 
                     <ul className="menu1">
-                        <li><a>Start</a></li>
-                        <li><a>O co chodzi?</a></li>
-                        <li><a>O nas</a></li>
-                        <li><a>Fundacja i organizacje</a></li>
-                        <li><a>Kontakt</a></li>
+                        <li><NavLink className='start' to='./'>Start</NavLink></li>
+                        <li><Link to="four_steps">O co chodzi?</Link></li>
+                        <li><Link to="about-us">O nas</Link></li>
+                        <li><Link to="organizations">Fundacja i organizacje</Link></li>
+                        <li><Link to="contact">Kontakt</Link></li>
                     </ul>
                 </header>
         )

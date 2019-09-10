@@ -24,6 +24,12 @@ header{
   li{
     margin-left: 30px;
   }
+  .start{
+    text-decoration: none;
+    color: $color_five;
+    border: 1px solid $color_five;
+    padding: 10px;
+  }
 }
 
 .hero{

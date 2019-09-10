@@ -2,6 +2,7 @@ import React,{Component} from 'react';
 import HomeHeader from './homeheader.js';
 import Section_one from './section_one.js';
 import Logged from './logowanie.js'
+import Register from './rejestracja.js';
 import {
     HashRouter,
     Route,
@@ -18,6 +19,7 @@ class Home extends Component{
                 <Switch>
                     <Route exact path='/' component={Section_one} />
                     <Route exact path='/logowanie' component={Logged} />
+                    <Route exact path='/rejestracja' component={Register} />
                 </Switch>
                     </>
                 </HashRouter>
