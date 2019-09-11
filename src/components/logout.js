@@ -12,7 +12,6 @@ class Logout extends Component{
             </div>
                 <button><Link to="./"> Strona główna</Link></button>
             </div>
-
         )
     }
 }
