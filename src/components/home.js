@@ -2,7 +2,8 @@ import React,{Component} from 'react';
 import HomeHeader from './homeheader.js';
 import Section_one from './section_one.js';
 import Login from './login.js'
-import Register from './rejestracja.js';
+import Register from './register.js';
+import Logout from './logout.js';
 import {
     HashRouter,
     Route,
@@ -20,6 +21,7 @@ class Home extends Component{
                     <Route exact path='/' component={Section_one} />
                     <Route exact path='/logowanie' component={Login} />
                     <Route exact path='/rejestracja' component={Register} />
+                    <Route exact path='/wylogowano' component={Logout} />
                 </Switch>
                     </>
                 </HashRouter>

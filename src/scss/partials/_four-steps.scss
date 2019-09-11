@@ -1,5 +1,7 @@
 .four_steps {
   position: relative;
+  background-color: white;
+  border: 1px solid white;
   .title-four {
     text-align: center;
     font-size: 30px;
@@ -10,7 +12,6 @@
     right: 425px;
   }
 }
-
 .four-columns{
   display: flex;
   justify-content: space-around;

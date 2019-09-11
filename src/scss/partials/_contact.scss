@@ -1,5 +1,6 @@
 .contact {
   display: flex;
+  background-color: white;
   .background-contact {
     width: 50vw;
     opacity: .2;
@@ -53,6 +54,7 @@ label{
 footer{
   display: flex;
   justify-content: flex-end;
+  background-color: white;
   .social-media {
     margin-right: 70px;
     img {
