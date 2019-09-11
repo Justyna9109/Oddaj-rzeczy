@@ -9,6 +9,7 @@ class HomeHeader extends Component{
     render() {
         return(<header>
                     <ul className="menu">
+                        <li><NavLink exact to="/wylogowano">Wyloguj</NavLink></li>
                         <li><NavLink exact className="anime" to="/logowanie">Zaloguj</NavLink></li>
                         <li><NavLink exact className="anime1" to="/rejestracja">Załóż konto</NavLink></li>
                     </ul>
