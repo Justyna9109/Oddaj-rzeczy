@@ -1,72 +1,79 @@
-import React,{Component} from 'react';
-import {
-    Link,
-} from 'react-router-dom';
+import React, {Component} from 'react';
+import {Link,} from 'react-router-dom';
 
-class Login extends Component{
-    state={
+class Login extends Component {
+    state = {
         email: '',
         password: '',
+        errors: [],
         error: []
     };
-    handleChanges = e =>{
+    handleChanges = e => {
         this.setState({
-            [e.target.name] : e.target.value,
+            [e.target.name]: e.target.value,
         })
     };
     handleSubmits = e => {
         e.preventDefault();
+        const errors = [];
         const error = [];
-        if(this.state.email.length <= 2){
-            error.push ("Podany email jest niepoprawny!")
+        if (this.state.email.length <= 2) {
+            error.push("Podany email jest niepoprawny!")
         }
-        if(this.state.password.length <= 6 ){
-            error.push('Podane hasło jest za krótkie!')
+        if (this.state.password.length <= 6) {
+            errors.push('Podane hasło jest za krótkie!')
         }
         this.setState({
-            error : error,
+            errors: errors,
+            error: error,
         })
     };
+
     render() {
-        const errorMessages = (
-            <ul className='error'>
-                {this.state.error.map( (err,index) => <li key={index}>{ err}</li>)}
+        const errorsMessages = (
+            <ul className='errors'>
+                {this.state.errors.map((err, index) => <li key={index}>{err}</li>)}
             </ul>
         );
-        return(<div className='login'>
+        const errorMessages = (
+            <ul className='errors'>
+                {this.state.error.map((err, index) => <li key={index}>{err}</li>)}
+            </ul>
+        );
+        return (<div className='login'>
                 <div className='login-title'>
-                <h2>Zaloguj się</h2>
-                <img src='/src/assets/Decoration.svg'/>
+                    <h2>Zaloguj się</h2>
+                    <img src='/src/assets/Decoration.svg'/>
                 </div>
 
                 <div className='form-login1'>
-                <form onSubmit={this.handleSubmits} className='login-text'>
+                    <form onSubmit={this.handleSubmits} className='login-text'>
 
-                    <div className='form-login'>
-                    <label className='email'>Email
-                        <input onChange={this.handleChanges} type='email' name='email' value = {this.state.email}/>
-                    </label>
+                        <div className='form-login'>
+                            <label className='email'>Email
+                                <input onChange={this.handleChanges} type='email' name='email'
+                                       value={this.state.email}/>
+                            </label>
+                            {errorMessages}
 
-                    <label className='password'>Hasło
-                        <input onChange={this.handleChanges} type='password' name='password' value = {this.state.password}/>
-                    </label>
-                    </div>
+                            <label className='password'>Hasło
+                                <input onChange={this.handleChanges} type='password' name='password'
+                                       value={this.state.password}/>
+                            </label>
+                            {errorsMessages}
+                        </div>
 
-                    {errorMessages}
-
-                    <label>
-                        <button><Link to='./rejestracja'>Załóż konto</Link></button>
-                    </label>
-                    <label className='submitSend'>
-                        <input className='sendSend' type='submit' value='Zaloguj się'/>
-                    </label>
-                </form>
+                        <label>
+                            <button><Link to='./rejestracja'>Załóż konto</Link></button>
+                        </label>
+                        <label className='submitSend'>
+                            <input className='sendSend' type='submit' value='Zaloguj się'/>
+                        </label>
+                    </form>
                 </div>
 
             </div>
-
         )
     }
 }
-
 export default Login;

@@ -1,32 +1,38 @@
-.about-us{
+.about-us {
   display: flex;
   background-color: $color_one;
-  .info{
+
+  .info {
     text-align: center;
     margin-top: 160px;
     margin-bottom: 100px;
     font-size: 20px;
     position: relative;
-    .decorrat{
+
+    .decorrat {
       position: absolute;
       bottom: 300px;
       left: 190px;
       width: 200px;
       margin-bottom: 15px;
     }
-    span{
+
+    span {
       font-size: 30px;
     }
-    .nori{
+
+    .nori {
       margin: 50px 80px 40px 80px;
       font-size: 19px;
     }
-    .signature{
+
+    .signature {
       float: right;
 
     }
   }
-  .people{
+
+  .people {
     width: 50%;
   }
 }

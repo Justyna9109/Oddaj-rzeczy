@@ -2,90 +2,106 @@
   position: relative;
   background-color: white;
   border: 1px solid white;
+
   .title-four {
     text-align: center;
     font-size: 30px;
     padding: 20px;
   }
-  .decoration{
+
+  .decoration {
     position: absolute;
     right: 425px;
   }
 }
-.four-columns{
+
+.four-columns {
   display: flex;
   justify-content: space-around;
   margin-top: 70px;
   background-color: $color_one;
   position: relative;
+
   .box-first, .box-two, .box-three, .box-four {
     width: 10vw;
     margin-bottom: 80px;
-    .icon, .icon2, .icon3, .icon4{
+
+    .icon, .icon2, .icon3, .icon4 {
       position: absolute;
       top: 0;
       margin-top: 80px;
     }
-    .steps{
+
+    .steps {
       margin-top: 180px;
       text-align: center;
       font-size: 16px;
     }
-    .line, .line2, .line3, .line4{
+
+    .line, .line2, .line3, .line4 {
       position: absolute;
     }
-    p{
+
+    p {
       margin-top: 15px;
       text-align: center;
     }
   }
 }
 
-.icon{
+.icon {
   left: 260px;
 }
-.icon2{
+
+.icon2 {
   left: 435px;
 }
-.icon3{
+
+.icon3 {
   right: 400px;
 }
-.icon4{
+
+.icon4 {
   right: 200px;
 }
 
-.box-first{
+.box-first {
   margin-left: 200px;
 }
 
-.box-four{
+.box-four {
   margin-right: 150px;
 }
 
-.line{
+.line {
   left: 265px;
 }
-.line2{
+
+.line2 {
   left: 455px;
 }
-.line3{
+
+.line3 {
   right: 400px;
 }
-.line4{
+
+.line4 {
   right: 210px;
 }
 
-.back-things{
+.back-things {
   display: flex;
   justify-content: center;
   margin-top: 50px;
   margin-bottom: 80px;
+
   p {
     border: 1px solid $color_five;
     text-align: center;
     font-size: 30px;
     width: 12vw;
-    a{
+
+    a {
       text-decoration: none;
       color: $color_five;
     }

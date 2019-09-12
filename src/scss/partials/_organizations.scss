@@ -1,18 +1,21 @@
-.organizations{
+.organizations {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: white;
-  .who{
+
+  .who {
     font-size: 35px;
     margin-top: 60px;
     margin-bottom: 10px;
   }
-  .fundation{
+
+  .fundation {
     display: flex;
     margin-top: 20px;
     justify-content: center;
-    p{
+
+    p {
       width: 14vw;
       font-size: 20px;
       text-align: center;
@@ -22,15 +25,16 @@
   }
 }
 
-.fundation-list{
-    text-align: center;
-    width: 40vw;
-    font-size: 18px;
-    margin-top: 60px;
-    margin-bottom: 60px;
-    margin-left: 100px;
+.fundation-list {
+  text-align: center;
+  width: 40vw;
+  font-size: 18px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  margin-left: 100px;
 }
-.organizations-list, .local-list{
+
+.organizations-list, .local-list {
   text-align: center;
   font-size: 18px;
   margin-top: 60px;
@@ -39,26 +43,30 @@
   width: 40vw;
 }
 
-.local-second-text{
+.local-second-text {
   margin-top: 20px;
   margin-bottom: 20px;
   border-top: 1px solid $color_five;
   border-bottom: 1px solid $color_five;
   padding-top: 20px;
   padding-bottom: 20px;
-  p{
+
+  p {
     font-size: 12px;
   }
 }
+
 .local-first-text, .local-three-text {
-  p{
+  p {
     font-size: 12px;
   }
 }
-.number{
+
+.number {
   display: flex;
   justify-content: center;
-  p{
+
+  p {
     margin-top: 40px;
     margin-right: 10px;
   }

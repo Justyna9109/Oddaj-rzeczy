@@ -1,78 +1,107 @@
 .contact {
   display: flex;
   background-color: white;
+
   .background-contact {
     width: 50vw;
     opacity: .2;
     margin-top: 40px;
     background-size: contain;
   }
-  .contact-us{
+
+  .contact-us {
     margin-top: 180px;
-    .title-contact{
+
+    .title-contact {
       margin-left: 80px;
     }
-    p{
+
+    p {
       font-size: 25px;
     }
-    form{
+
+    form {
       margin-top: 50px;
       margin-left: 40px;
       margin-right: 50px;
-      .first{
+
+      .first {
         display: flex;
       }
-      input{
-        width: 10vw;
-        height: 4vh;
+
+      input {
         border: none;
         border-bottom: 1px solid $color_five;
       }
-      .message{
-        height: 10vh;
-        width: 23vw;
-        text-align: center;
-      }
-      .send{
-        width: 5vw;
+
+      .send {
+        padding: 10px;
+        width: 7vw;
+        font-size: 15px;
         float: right;
-        margin-right: 40px;
+        margin-right: 0;
         margin-top: 30px;
         border: 1px solid $color_five;
         background-color: white;
       }
+
+      .errorContact {
+        li {
+          color: $color_six;
+          list-style: none;
+          font-size: 11px;
+        }
+      }
     }
   }
 }
-label{
+
+label {
   font-size: 16px;
 }
-.second{
+
+.second {
   margin-top: 40px;
+
+  label {
+    textarea {
+      margin-top: 10px;
+      border: none;
+      border-bottom: 1px solid $color_five;
+    }
+  }
+
+  .errorsContact {
+    li {
+      list-style: none;
+      color: $color_six;
+      font-size: 12px;
+    }
+  }
 }
 
-footer{
+footer {
   display: flex;
   justify-content: flex-end;
   background-color: white;
+
   .social-media {
     margin-right: 70px;
+
     img {
       margin-right: 20px;
     }
   }
-  p{
+
+  p {
     margin-right: 350px;
     font-size: 12px;
   }
 }
-.error{
-  margin-top: 30px;
-  li{
-    list-style: none;
-    color: $color_six;
-    font-size: 14px;
 
-  }
+.message {
+  display: flex;
+  justify-content: space-between;
 }
+
 

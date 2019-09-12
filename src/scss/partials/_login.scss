@@ -1,7 +1,8 @@
-.login{
+.login {
   background-color: white;
   border: 1px solid white;
-  button{
+
+  button {
     width: 90px;
     height: 50px;
     border: none;
@@ -9,23 +10,27 @@
     position: relative;
     margin-right: 240px;
     left: 340px;
-    margin-top: 40px;
-    margin-bottom: 50px;
+    margin-top: 30px;
+    margin-bottom: 20px;
     font-size: 16px;
-    a{
+
+    a {
       text-decoration: none;
       color: $color_five;
     }
   }
 }
-.login-title{
+
+.login-title {
   text-align: center;
-  margin-top: 100px;
-  h2{
+  margin-top: 70px;
+
+  h2 {
     margin-bottom: 10px;
   }
 }
-.form-login{
+
+.form-login {
   //display: flex;
   background-color: $color_one;
   width: 26vw;
@@ -34,10 +39,12 @@
   padding: 25px;
   margin-top: 40px;
 }
-.login-text{
+
+.login-text {
   .email, .password {
     margin-left: 40px;
     font-weight: bold;
+
     input {
       width: 17vw;
       height: 8vh;
@@ -50,8 +57,10 @@
     }
   }
 }
+
 .submitSend {
   position: relative;
+
   .sendSend {
     position: absolute;
     border: none;

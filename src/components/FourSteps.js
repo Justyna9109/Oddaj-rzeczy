@@ -1,9 +1,9 @@
-import React,{Component} from 'react';
+import React, {Component} from 'react';
 import {Link} from "react-router-dom";
 
-class FourSteps extends Component{
+class FourSteps extends Component {
     render() {
-        return(<section className="four_steps">
+        return (<section className="four_steps">
                 <div className='title-four'>Wystarczą 4 proste kroki</div>
                 <img className='decoration' src='/src/assets/Decoration.svg'/>
 
@@ -44,9 +44,7 @@ class FourSteps extends Component{
                 </div>
 
             </section>
-
         )
     }
 }
-
 export default FourSteps;
