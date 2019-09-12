@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import {Link} from "react-router-dom";
 
-class Four_steps extends Component{
+class FourSteps extends Component{
     render() {
         return(<section className="four_steps">
                 <div className='title-four'>Wystarczą 4 proste kroki</div>
@@ -49,4 +49,4 @@ class Four_steps extends Component{
     }
 }
 
-export default Four_steps;
+export default FourSteps;

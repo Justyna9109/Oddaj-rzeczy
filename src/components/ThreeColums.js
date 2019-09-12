@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 
-class Three_columns extends Component{
+class ThreeColumns extends Component{
     render() {
         return(<section className="three_columns">
                 <div className='one_column'>
@@ -27,4 +27,4 @@ class Three_columns extends Component{
     }
 }
 
-export default Three_columns;
+export default ThreeColumns;

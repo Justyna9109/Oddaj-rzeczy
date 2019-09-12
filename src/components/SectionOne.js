@@ -1,15 +1,15 @@
 import React,{Component} from 'react';
-import Three_columns from './three_colums.js';
-import Four_steps from './four_steps.js';
-import About_us from './about_us.js';
-import Organizations from "./organizations.js";
-import Contact from './contact.js';
+import ThreeColumns from './ThreeColums.js';
+import FourSteps from './FourSteps.js';
+import AboutUs from './AboutUs.js';
+import Organizations from "./Organizations.js";
+import Contact from './Contact.js';
 import {
     Link,
 } from 'react-router-dom';
 
 
-class Section_one extends Component{
+class SectionOne extends Component{
     render() {
         return( <>
             <section className='one'>
@@ -31,9 +31,9 @@ class Section_one extends Component{
                 </div>
             </section>
 
-            <Three_columns/>
-            <Four_steps/>
-            <About_us/>
+            <ThreeColumns/>
+            <FourSteps/>
+            <AboutUs/>
             <Organizations/>
             <Contact/>
 
@@ -43,4 +43,4 @@ class Section_one extends Component{
     }
 }
 
-export default Section_one;
+export default SectionOne;
