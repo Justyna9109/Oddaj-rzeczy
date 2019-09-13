@@ -32,9 +32,36 @@ class Contact extends Component {
             erro: erro,
             error: error,
             errors: errors,
-        })
-    };
+        });
+        const ob = [
+            {
+                userId: 1,
+                title: "imię",
+                body: this.state.name
+            },
+            {
+                userId: 2,
+                title: "email",
+                body: this.state.mail
+            },
+            {
+                userId: 3,
+                title: "message",
+                body: this.state.pass
+            },
+        ];
 
+        fetch("https://fer-api.coderslab.pl/v1/portfolio/contact", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json; charset=utf-8"
+            },
+            body: JSON.stringify(ob)
+        })
+            .then(res => res.json())
+            .then(res => console.log('Success:',res))
+            .catch(err => console.log('Error;', err))
+    };
     render() {
         const erroMessages = (
             <ul className='errorContact'>
