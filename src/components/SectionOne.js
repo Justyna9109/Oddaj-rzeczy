@@ -19,7 +19,7 @@ class SectionOne extends Component {
                             <img src='/src/assets/Decoration.svg'/>
 
                             <div className='box'>
-                                <p><Link to="/logowanie">ODDAJ <br></br> RZECZY</Link></p>
+                                <p><Link to="/oddajrzeczy">ODDAJ <br></br> RZECZY</Link></p>
                                 <p><Link to="/logowanie">ZORGANIZUJ <br></br>ZBIÓRKĘ</Link></p>
                             </div>
 

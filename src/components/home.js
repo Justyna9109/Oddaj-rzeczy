@@ -4,6 +4,7 @@ import SectionOne from './SectionOne.js';
 import Login from './Login.js'
 import Register from './Register.js';
 import Logout from './Logout.js';
+import GiveBack from './GiveBack.js';
 import {
     HashRouter,
     Route,
@@ -22,6 +23,7 @@ class Home extends Component {
                             <Route exact path='/logowanie' component={Login}/>
                             <Route exact path='/rejestracja' component={Register}/>
                             <Route exact path='/wylogowano' component={Logout}/>
+                            <Route exact path='/oddajrzeczy' component={GiveBack}/>
                         </Switch>
                     </>
                 </HashRouter>

@@ -1,0 +1,60 @@
+.give-back {
+  display: flex;
+  background-color: white;
+  margin-bottom: -168px;
+
+  .background-give {
+    width: 36vw;
+    height: 100vh;
+    margin-top: 40px;
+    background-size: contain;
+    position: relative;
+    bottom: 168px;
+  }
+}
+
+.give-text {
+  margin-top: 60px;
+  margin-left: 120px;
+  position: relative;
+
+  .give-title {
+    justify-content: center;
+
+    img {
+      position: absolute;
+      right: 80px;
+    }
+
+    p {
+      text-align: center;
+      font-size: 24px;
+    }
+
+    .help {
+      text-align: center;
+    }
+
+    .four {
+      margin-top: 50px;
+
+    }
+
+    .steps {
+      display: flex;
+      margin-top: 50px;
+      margin-right: 110px;
+
+      p {
+        font-size: 22px;
+      }
+
+      li {
+        margin-right: 22px;
+        text-align: center;
+        width: 4vw;
+        list-style: none;
+      }
+    }
+  }
+}
