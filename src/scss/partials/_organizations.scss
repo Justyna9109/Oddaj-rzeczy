@@ -24,50 +24,14 @@
     }
   }
 }
-
-.fundation-list {
-  text-align: center;
-  width: 40vw;
-  font-size: 18px;
-  margin-top: 60px;
-  margin-bottom: 60px;
-  margin-left: 100px;
-}
-
-.organizations-list, .local-list {
+.local-text {
   text-align: center;
   font-size: 18px;
   margin-top: 60px;
   margin-bottom: 60px;
   margin-left: 70px;
-  width: 40vw;
-}
-
-.local-second-text {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  border-top: 1px solid $color_five;
-  border-bottom: 1px solid $color_five;
-  padding-top: 20px;
-  padding-bottom: 20px;
-
+  width: 46vw;
   p {
-    font-size: 12px;
-  }
-}
-
-.local-first-text, .local-three-text {
-  p {
-    font-size: 12px;
-  }
-}
-
-.number {
-  display: flex;
-  justify-content: center;
-
-  p {
-    margin-top: 40px;
-    margin-right: 10px;
+    font-size: 18px;
   }
 }

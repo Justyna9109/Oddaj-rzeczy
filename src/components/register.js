@@ -9,7 +9,7 @@ class Register extends Component {
         erro: [],
         error: [],
         errors: []
-    };
+};
     handleChanges = e => {
         this.setState({
             [e.target.name]: e.target.value,
@@ -34,6 +34,26 @@ class Register extends Component {
             error: error,
             errors: errors,
         })
+        fetch("http://localhost:3000/register", {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                email: this.state.email,
+                password: this.state.password,
+                password2: this.state.password2
+            })
+        })
+            .then( function(){
+                if (erro.length === 0 && error.length === 0 && errors.length === 0) {
+                    console.log("success", "User registered!", "You can now log in using your credentials.");
+                } else {
+                    console.log("danger", "Something went wrong.");
+                }
+            }).catch(function () {
+            console.log("danger", "Error", "Something went wrong.");
+        })
     };
 
     render() {
@@ -52,45 +72,51 @@ class Register extends Component {
                 {this.state.errors.map((er, i) => <li key={i}>{er}</li>)}
             </ul>
         );
-        return (<div className='register'>
-                <div className='register-title'>
-                    <h2>Załóż konto</h2>
-                    <img src='/src/assets/Decoration.svg'/>
+        return (<>
+                <div className='register'>
+                    <div className='register-title'>
+                        <h2>Załóż konto</h2>
+                        <img src='/src/assets/Decoration.svg'/>
+                    </div>
+
+                    <h3 className="head">{this.state.head}</h3>
+
+                    <div className='form-register1'>
+                        <form onSubmit={this.handleSubmits} className='register-text'>
+                            <div className='form-register'>
+                                <label>Email
+                                    <input onChange={this.handleChanges} type='email' name='email'
+                                           value={this.state.email}/>
+                                </label>
+                                {erroMessages}
+
+                                <label>Hasło
+                                    <input onChange={this.handleChanges} type='password' name='password'
+                                           value={this.state.password}/>
+                                </label>
+                                {errorsMessage}
+
+                                <label>Powtórz hasło
+                                    <input onChange={this.handleChanges} type='password' name='password2'
+                                           value={this.state.password2}/>
+                                </label>
+                                {errorMessages}
+                            </div>
+
+                            <label>
+                                <button><Link to='./logowanie'>Zaloguj się</Link></button>
+                            </label>
+                            <label className='submitLogin'>
+                                <input className='sendLogin' type='submit' value='Załóż konto'/>
+                            </label>
+                        </form>
+                    </div>
+
                 </div>
 
-                <div className='form-register1'>
-                    <form onSubmit={this.handleSubmits} className='register-text'>
-                        <div className='form-register'>
-                            <label>Email
-                                <input onChange={this.handleChanges} type='email' name='email'
-                                       value={this.state.email}/>
-                            </label>
-                            {erroMessages}
-
-                            <label>Hasło
-                                <input onChange={this.handleChanges} type='password' name='password'
-                                       value={this.state.password}/>
-                            </label>
-                            {errorsMessage}
-
-                            <label>Powtórz hasło
-                                <input onChange={this.handleChanges} type='password' name='password2'
-                                       value={this.state.password2}/>
-                            </label>
-                            {errorMessages}
-                        </div>
-
-                        <label>
-                            <button><Link to='./logowanie'>Zaloguj się</Link></button>
-                        </label>
-                        <label className='submitLogin'>
-                            <input className='sendLogin' type='submit' value='Załóż konto'/>
-                        </label>
-                    </form>
-                </div>
-
-            </div>
+            </>
         )
     }
 }
+
 export default Register;

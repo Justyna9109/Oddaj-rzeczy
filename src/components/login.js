@@ -26,7 +26,24 @@ class Login extends Component {
         this.setState({
             errors: errors,
             error: error,
-        })
+        });
+        if (errors.length === 0 && error.length === 0) {
+            fetch("http://localhost:3000/register", {
+                email: this.state.email,
+                password: this.state.password
+            }) //.then(user => user.json())
+                .then(user => {
+                    console.log("poprawne", user)
+                    this.setState({
+                        user:user
+                    })
+                }).catch(err => {
+                this.setState({
+                    errors: [err],
+                    error: [err]
+                })
+            })
+        }
     };
 
     render() {
@@ -76,4 +93,5 @@ class Login extends Component {
         )
     }
 }
+
 export default Login;

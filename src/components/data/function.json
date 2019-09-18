@@ -1,0 +1,82 @@
+{
+  "function1": [
+    {
+      "id": 1,
+      "name": "Fundacja 'Dbam o Zdrowie'",
+      "meta": "Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
+      "thing": "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
+    },
+    {
+      "id": 2,
+      "name": "Fundacja 'Dla dzieci'",
+      "meta": "Cel i misja: Pomoc dzieciom z ubogich rodzin.",
+      "thing": "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
+    },
+    {
+      "id": 3,
+      "name": "Fundacja 'Bez domu'",
+      "meta": "Cel i misja: Pomoc dla osób nie posiadająych miejsca zamieszkania.",
+      "thing": "ubrania, jedzenie, ciepłe koce"
+    },
+    {
+      "id": 4,
+      "name": "Fundacja 'Bez domu'",
+      "meta": "Cel i misja: Pomoc dla osób nie posiadająych miejsca zamieszkania.",
+      "thing": "ubrania, jedzenie, ciepłe koce"
+    },
+    {
+      "id": 5,
+      "name": "Fundacja 'Dbam o Zdrowie'",
+      "meta": "Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
+      "thing": "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
+    }
+  ],
+  "organizations": [
+    {
+      "id": 1,
+      "name": "Zbiórka 'Lorem Ipsum 1'",
+      "meta": "Quis varius quam quisque id diam vel quam elementum pulvinar.",
+      "thing": "Egestas, sed, tempus"
+    },
+    {
+      "id": 2,
+      "name": "Zbiórka 'Lorem Ipsum 2'",
+      "meta": "Hendrerit gravida rutrum quisque non tellus orci ac autor augue.",
+      "thing": "Ut, aliquam, purus, sit, amet"
+    },
+    {
+      "id": 3,
+      "name": "Zbiórka 'Lorem Ipsum 3'",
+      "meta": "Scelerisque in dictum non consectetur a erat nam.",
+      "thing": "Mi, quis, hendrerit, dolor"
+    }
+  ],
+  "local": [
+    {
+      "id": 1,
+      "name": "Zbiórka 'Lorem Ipsum 1'",
+      "meta": "Quis varius quam quisque id diam vel quam elementum pulvinar.",
+      "thing": "Egestas, sed, tempus"
+    },
+    {
+      "id": 2,
+      "name": "Zbiórka 'Lorem Ipsum 2'",
+      "meta": "Hendrerit gravida rutrum quisque non tellus orci ac autor augue.",
+      "thing": "Ut, aliquam, purus, sit, amet"
+    },
+    {
+      "id": 3,
+      "name": "Zbiórka 'Lorem Ipsum 3'",
+      "meta": "Scelerisque in dictum non consectetur a erat nam.",
+      "thing": "Mi, quis, hendrerit, dolor"
+    }
+  ],
+  "register": [
+    {
+      "email": "justynakasprzyk91@wp.pl",
+      "password": "mmmmmmmm",
+      "password2": "mmmmmmmm",
+      "id": 1
+    }
+  ]
+}

@@ -7,7 +7,8 @@ class Contact extends Component {
         pass: "",
         erro: [],
         error: [],
-        errors: []
+        errors: [],
+        contacts: true,
     };
     handleChange = e => {
         this.setState({
@@ -33,24 +34,11 @@ class Contact extends Component {
             error: error,
             errors: errors,
         });
-        const ob = [
-            {
-                userId: 1,
-                title: "imię",
-                body: this.state.name
-            },
-            {
-                userId: 2,
-                title: "email",
-                body: this.state.mail
-            },
-            {
-                userId: 3,
-                title: "message",
-                body: this.state.pass
-            },
-        ];
-
+        const ob = {
+            name: this.state.name,
+            email: this.state.mail,
+            message: this.state.pass,
+        }
         fetch("https://fer-api.coderslab.pl/v1/portfolio/contact", {
             method: "POST",
             headers: {
@@ -59,9 +47,13 @@ class Contact extends Component {
             body: JSON.stringify(ob)
         })
             .then(res => res.json())
-            .then(res => console.log('Success:',res))
+            .then(res => console.log("sucess"))
+            this.setState({
+                contacts: this.state.contacts ? "" : "Wiadomość została wysłana! Wkrótce się skontaktujemy",
+        })
             .catch(err => console.log('Error;', err))
-    };
+    }
+
     render() {
         const erroMessages = (
             <ul className='errorContact'>
@@ -88,6 +80,8 @@ class Contact extends Component {
                             <p>Skontaktuj się z nami</p>
                             <img src='/src/assets/Decoration.svg'/>
                         </div>
+
+                        <h2 className='contacts'>{this.state.contacts}</h2>
 
 
                         <form onSubmit={this.handleSubmit}>
