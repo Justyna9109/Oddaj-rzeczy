@@ -35,3 +35,20 @@
     font-size: 18px;
   }
 }
+
+.number{
+  display: flex;
+  margin-top: 20px;
+  li{
+    padding: 5px 10px;
+    color: $color_five;
+    cursor: pointer;
+    background-color: white;
+    margin-left: 1em;
+    list-style: none;
+  }
+}
+.active{
+  box-shadow: 0 1px 1px 1px #bbbaba;
+}
+

@@ -4,17 +4,17 @@ class Step1 extends Component{
     state={
         step: true
     }
-    handleClick =e => {
+    handleClick = e => {
         this.setState({
             step: false
         })
 
     }
     render() {
-        const step1 = {
+        const step = {
             display: this.state.step ? '' : "none"
         }
-        return(<section style={step1} className='step1'>
+        return(<section style={step} className='step1'>
 
                 <div className='yellow-step1'>
                     <h1>Ważne!</h1>

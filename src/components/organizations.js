@@ -14,7 +14,9 @@ class Organizations extends Component {
         super(props);
         this.state = {
             list: [],
-            org: 'function1'
+            org: 'function1',
+            currentPage: 1,
+            listPerPage: 3,
         };
     }
 
@@ -22,7 +24,14 @@ class Organizations extends Component {
         this.fetchData(this.state.org)
     }
 
-    handleClick = name => () => this.fetchData(name)
+    handleClick = name => () => this.fetchData(name);
+
+    handleClicks = (event, i) => {
+        this.setState({
+            currentPage : i
+        })
+
+    }
 
     fetchData(name) {
         fetch(`http://localhost:3000/${name}`)
@@ -32,13 +41,20 @@ class Organizations extends Component {
 
                 this.setState({
                     list: d,
-                    org: name
+                    org: name,
                 })
             })
     }
+
     get list() {
-        return this.state.list.map(element => (
-            <tr>
+        const {list, currentPage, listPerPage} = this.state;
+
+        const indexOfLast = currentPage * listPerPage;
+        const indexOfFirst = indexOfLast - listPerPage;
+        const currentList = list.slice(indexOfFirst, indexOfLast);
+
+        return currentList.map(element => (
+            <tr key={element.id}>
                 <td>{element.name}
                     <p>{element.meta}</p>
                 </td>
@@ -48,6 +64,19 @@ class Organizations extends Component {
     }
 
     render() {
+        const {list, listPerPage} = this.state;
+
+        const pageNumbers = [];
+        for(let i = 1; i <= Math.ceil(list.length/listPerPage); i++ ){
+
+            const element = <li
+                                onClick={e => this.handleClicks(e,i)}
+                                className={this.state.currentPage === i ? "active" : ''}
+                                key={i}>
+                            {i}
+                            </li>
+            pageNumbers.push(element)
+        }
         return (
             <section className='organizations'>
                 <p className='who'>Komu pomagamy?</p>
@@ -66,6 +95,10 @@ class Organizations extends Component {
                     {this.list}
                     </tbody>
                 </table>
+
+                <ul className='number'>
+                        {pageNumbers}
+                </ul>
             </section>
         )
     }

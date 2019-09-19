@@ -4,7 +4,7 @@ class Step2 extends Component{
     state={
         step: true
     }
-    handleClick =e => {
+    handleClick = e => {
         this.setState({
             step: false
         })
