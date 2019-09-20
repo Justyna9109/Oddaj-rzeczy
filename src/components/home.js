@@ -12,15 +12,23 @@ import {
 } from 'react-router-dom';
 
 class Home extends Component {
+    state= {
+        user: null
+    }
+    handleSetUser = user => {
+        this.setState({
+            user
+        })
+    }
     render() {
         return (
             <section className='container'>
                 <HashRouter>
                     <>
-                        <HomeHeader/>
+                        <HomeHeader user={this.state.user}/>
                         <Switch>
                             <Route exact path='/' component={SectionOne}/>
-                            <Route exact path='/logowanie' component={Login}/>
+                            <Route path='/logowanie' render={(props) => <Login {...props} setUser={this.handleSetUser} />}/>
                             <Route exact path='/rejestracja' component={Register}/>
                             <Route exact path='/wylogowano' component={Logout}/>
                             <Route exact path='/oddajrzeczy' component={GiveBack}/>

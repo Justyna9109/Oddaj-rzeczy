@@ -6,7 +6,8 @@ class Login extends Component {
         email: '',
         password: '',
         errors: [],
-        error: []
+        error: [],
+        user: null
     };
     handleChanges = e => {
         this.setState({
@@ -31,21 +32,24 @@ class Login extends Component {
             fetch("http://localhost:3000/register", {
                 email: this.state.email,
                 password: this.state.password
-            }) //.then(user => user.json())
-                .then(user => {
-                    console.log("poprawne", user)
-                    this.setState({
-                        user:user
-                    })
-                }).catch(err => {
-                this.setState({
-                    errors: [err],
-                    error: [err]
-                })
-            })
+            }).then(res => res.json())
+                .then(users => {
+                    const resp = users.find(user => user.email === this.state.email && user.password === this.state.password)
+                    console.log(resp);
+                    if (resp) {
+                       /* this.setState({
+                            user : resp
+
+                        */
+                        //})
+                        this.props.setUser(resp)
+                    }
+                }).catch(function() {
+                    console.log("Error");
+                }
+            )
         }
     };
-
     render() {
         const errorsMessages = (
             <ul className='errors'>

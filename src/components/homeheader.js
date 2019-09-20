@@ -5,12 +5,23 @@ import {
 import {Link,} from 'react-scroll';
 
 class HomeHeader extends Component {
+    get user() {
+        return this.props.user
+    }
     render() {
         return (<header>
                 <ul className="menu">
-                    <li><NavLink exact to="/wylogowano">Wyloguj</NavLink></li>
-                    <li><NavLink exact className="anime" to="/logowanie">Zaloguj</NavLink></li>
-                    <li><NavLink exact className="anime1" to="/rejestracja">Załóż konto</NavLink></li>
+                    {this.user ? (
+                        <>
+                        <li>{this.user.email}</li>
+                        <li><NavLink exact to="/wylogowano">Wyloguj</NavLink></li>
+                        </>
+                    ) : (
+                        <>
+                            <li><NavLink exact className="anime" to="/logowanie">Zaloguj</NavLink></li>
+                            <li><NavLink exact className="anime1" to="/rejestracja">Załóż konto</NavLink></li>
+                        </>
+                    )}
                 </ul>
 
                 <ul className="menu1">
