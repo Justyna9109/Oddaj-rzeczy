@@ -69,7 +69,7 @@ class Step3 extends Component{
                             </label>
                             </div>
 
-                            <div className='button-step3'>
+                            <div className='button-step4'>
                             <label>
                                 <button onClick={this.handleClick} className='then-step3'>Wstecz</button>
                                 <button onClick={this.handleClick} className='then-step3'>Dalej</button>

@@ -8,7 +8,7 @@ class Register extends Component {
         password2: '',
         erro: [],
         error: [],
-        errors: []
+        errors: [],
 };
     handleChanges = e => {
         this.setState({
@@ -46,7 +46,8 @@ class Register extends Component {
             })
         })
             .then( function(){
-                if (erro.length === 0 && error.length === 0 && errors.length === 0) {
+                const user = (erro.length === 0 && error.length === 0 && errors.length === 0);
+                if (user) {
                     console.log("success", "User registered!", "You can now log in using your credentials.");
                 } else {
                     console.log("danger", "Something went wrong.");

@@ -1,0 +1,89 @@
+.text-step4 {
+  display: flex;
+  background-color: $color_one;
+
+  .step4-box1 {
+    padding: 30px;
+    margin-left: 60px;
+
+    h3 {
+      margin-top: 40px;
+      font-size: 22px;
+      width: 133%;
+    }
+  }
+}
+
+.background-step4 {
+  float: right;
+  width: 100%;
+  height: 100%;
+}
+
+.form-form {
+  display: flex;
+}
+
+.form-adress {
+  margin-top: 30px;
+  width: 270px;
+
+  legend {
+    font-weight: bold;
+  }
+
+  label {
+    margin-top: 15px;
+
+    input {
+      width: 160px;
+      height: 30px;
+    }
+  }
+}
+
+.adress-first{
+  margin-left: 51px;
+}
+.adress-second{
+  margin-left: 39px;
+}
+.adress-three{
+  margin-left: 20px;
+}
+.adress-four{
+  margin-left: 27px;
+}
+
+.form-data {
+  margin-top: 30px;
+  width: 270px;
+  margin-left: 50px;
+
+  legend {
+    font-weight: bold;
+  }
+
+  label {
+    margin-top: 15px;
+    input {
+      width: 160px;
+      height: 30px;
+    }
+  }
+}
+.data-first{
+  margin-left: 63px;
+}
+.data-second{
+  margin-left: 37px;
+}
+.data-three{
+  margin: 0 0 0 51px;
+  width: 160px;
+  height: 92px;
+}
+
+.button-step4{
+  margin-top: 80px;
+}

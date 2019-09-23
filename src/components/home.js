@@ -29,7 +29,7 @@ class Home extends Component {
                         <Switch>
                             <Route exact path='/' component={SectionOne}/>
                             <Route path='/logowanie' render={(props) => <Login {...props} setUser={this.handleSetUser} />}/>
-                            <Route exact path='/rejestracja' component={Register}/>
+                            <Route path='/rejestracja' component={Register}/>
                             <Route exact path='/wylogowano' component={Logout}/>
                             <Route exact path='/oddajrzeczy' component={GiveBack}/>
                         </Switch>

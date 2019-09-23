@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import Contact from "./Contact.js";
-import Step1 from './Step1.js';
-import Step2 from "./Step2.js";
-import Step3 from './Step3.js';
+import Step from './Step.js';
 
 class GiveBack extends Component{
     render() {
@@ -27,9 +25,7 @@ class GiveBack extends Component{
                 </div>
             </section>
 
-                <Step1/>
-                <Step2/>
-                <Step3/>
+                <Step/>
                 <Contact/>
                 </>
 
