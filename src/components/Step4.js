@@ -1,21 +1,17 @@
 import React, {Component} from 'react';
 
 class Step4 extends Component {
-    state = {
-        step: true,
-    }
     handleClick = e => {
-        this.setState({
-            step: false
-        })
-
+        e.preventDefault();
+        const data = {};
+        for (let el of e.target) {
+            data[el.name] = el.checked
+        }
+        this.props.onNext(data)
     }
 
     render() {
-        const step1 = {
-            display: this.state.step ? '' : "none"
-        }
-        return (<section style={step1} className='Step4'>
+        return (<section className='Step4'>
 
                 <div className='yellow-step2'>
                     <h1>Ważne!</h1>
@@ -29,43 +25,42 @@ class Step4 extends Component {
                         <h3>Podaj adres oraz termin odbioru rzeczy przez kuriera:</h3>
 
                         <div className='form-form'>
-                        <form className='form-adress'>
+                        <form onSubmit={this.handleClick} className='form-adress'>
                             <legend>Adres odbioru:</legend>
                             <label>Ulica
-                                <input className='adress-first'/>
+                                <input name='ulica' className='adress-first'/>
                             </label>
                             <label>Miasto
-                                <input className='adress-second'/>
+                                <input name='miasto' className='adress-second'/>
                             </label>
                             <label>Kod <br></br> pocztowy
-                                <input className='adress-three'/>
+                                <input name='pocztowy' className='adress-three'/>
                             </label>
                             <label>Numer <br></br>telefonu
-                                <input className='adress-four'/>
+                                <input name='telefon' className='adress-four'/>
                             </label>
                         </form>
 
-                        <form className='form-data'>
+                        <form onSubmit={this.handleClick} className='form-data'>
                             <legend>Termin odbioru:</legend>
                             <label>Data
-                                <input className='data-first'/>
+                                <input name='data' className='data-first'/>
                             </label>
                             <label>Godzina
-                                <input className='data-second'/>
+                                <input name='godzina' className='data-second'/>
                             </label>
                             <label>Uwagi
-                                <textarea className='data-three' cols='-10' rows='2'/>
+                                <textarea name='uwagi' className='data-three' cols='-10' rows='2'/>
                             </label>
+
+                            <div className='button-step4'>
+                                <label>
+                                    <button className='then-step3'>Wstecz</button>
+                                    <button type="submit" className='then-step3'>Dalej</button>
+                                </label>
+                            </div>
                         </form>
                         </div>
-
-
-                    <div className='button-step4'>
-                        <label>
-                            <button onClick={this.handleClick} className='then-step3'>Wstecz</button>
-                            <button onClick={this.handleClick} className='then-step3'>Dalej</button>
-                        </label>
-                    </div>
 
                     </div>
 

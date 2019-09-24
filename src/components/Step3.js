@@ -1,35 +1,35 @@
 import React, {Component} from 'react';
 
-class Step3 extends Component{
-    state={
+class Step3 extends Component {
+    state = {
         pos: true,
-        step: true
+    }
+
+    handleClickColor = e => {
+        this.setState({
+            pos: false
+        })
+
     }
     handleClick = e => {
-        this.setState({
-            step: false
-        })
-
-    }
-    handleClickColor = e =>{
-        this.setState({
-            pos:false
-        })
-
+        e.preventDefault();
+        const data = {};
+        for (let el of e.target) {
+            data[el.name] = el.checked
+        }
+        this.props.onNext(data)
     }
     render() {
         const style = {
             backgroundColor: this.state.pos ? "" : "orange"
         }
-        const step1 = {
-            display: this.state.step ? '' : "none"
-        }
-        return(<section style={step1} className='Step3'>
+
+        return (<section className='Step3'>
 
                 <div className='yellow-step2'>
                     <h1>Ważne!</h1>
                     <p>Jeśli wiesz komu chcesz pomóc, możesz wpisać nazwę tej organizacji w wyszukiwarce.
-                    Możesz też filtrować organizacje po ich lokalizacji bądź celu ich pomocy.</p>
+                        Możesz też filtrować organizacje po ich lokalizacji bądź celu ich pomocy.</p>
                 </div>
 
                 <div className='text-step3'>
@@ -40,21 +40,24 @@ class Step3 extends Component{
 
                         <div className='select-step3'>
                             <div className='city'>
-                                <select>
-                                    <option value="1">wybierz</option>
-                                    <option value="2">Poznań</option>
-                                    <option value="3">Warszawa</option>
-                                    <option value="4">Kraków</option>
-                                    <option value="5">Wrocław</option>
-                                    <option value="5">Katowice</option>
-                                </select>
+                                <form onSubmit={this.handleClick}>
+                                    <select>
+                                        <option value="1">wybierz</option>
+                                        <option value="2">Poznań</option>
+                                        <option value="3">Warszawa</option>
+                                        <option value="4">Kraków</option>
+                                        <option value="5">Wrocław</option>
+                                        <option value="5">Katowice</option>
+                                    </select>
+                                </form>
                             </div>
 
                             <h2 className='title-help'>Komu chcesz pomóc?</h2>
 
-                            <form className='help-who'>
+                            <form onSubmit={this.handleClick} className='help-who'>
                                 <label>
-                                    <input style={style} onClick={this.handleClickColor} type="text" placeholder='dzieciom'/>
+                                    <input style={style} onClick={this.handleClickColor} type="text"
+                                           placeholder='dzieciom'/>
                                     <input type="text" placeholder='samotnym matkom'/>
                                     <input type="text" placeholder='bezdomnym'/>
                                     <input type="text" placeholder='niepełnosprawny'/>
@@ -63,17 +66,20 @@ class Step3 extends Component{
                             </form>
 
                             <div className='input-empty'>
-                            <h2 className='title-organizations'>Wpisz nazwę konkretnej organizacji (opcjonalnie)</h2>
-                            <label>
-                            <input/>
-                            </label>
-                            </div>
+                                <h2 className='title-organizations'>Wpisz nazwę konkretnej organizacji
+                                    (opcjonalnie)</h2>
+                                <form onSubmit={this.handleClick}>
+                                    <label>
+                                        <input/>
+                                    </label>
 
-                            <div className='button-step4'>
-                            <label>
-                                <button onClick={this.handleClick} className='then-step3'>Wstecz</button>
-                                <button onClick={this.handleClick} className='then-step3'>Dalej</button>
-                            </label>
+                                    <div className='button-step4'>
+                                        <label>
+                                            <button className='then-step3'>Wstecz</button>
+                                            <button type='submit' className='then-step3'>Dalej</button>
+                                        </label>
+                                    </div>
+                                </form>
                             </div>
 
                         </div>
@@ -91,4 +97,5 @@ class Step3 extends Component{
         )
     }
 }
+
 export default Step3;

@@ -1,24 +1,22 @@
 import React, {Component} from 'react';
 
-class Step2 extends Component{
-    state={
-        step: true
-    }
+class Step2 extends Component {
     handleClick = e => {
-        this.setState({
-            step: false
-        })
-
-    }
-    render() {
-        const step1 = {
-            display: this.state.step ? '' : "none"
+        e.preventDefault();
+        const data = {};
+        for (let el of e.target) {
+            data[el.name] = el.checked
         }
-        return(<section style={step1} className='step2'>
+        this.props.onNext(data)
+    }
+
+    render() {
+        return (<section className='step2'>
 
                 <div className='yellow-step2'>
                     <h1>Ważne!</h1>
-                    <p>Wszystkie rzeczy do oddania zapakuj w 60l worki. Dokładną instrukcję jak poprawnie spakować rzeczy znajdziesz TUTAJ.</p>
+                    <p>Wszystkie rzeczy do oddania zapakuj w 60l worki. Dokładną instrukcję jak poprawnie spakować
+                        rzeczy znajdziesz TUTAJ.</p>
                 </div>
 
                 <div className='text-step2'>
@@ -29,21 +27,23 @@ class Step2 extends Component{
 
                         <div className='select-step2'>
                             <div className='bags'>
-                            <p>Liczba 60l worków:</p>
-                        <select>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
+                                <p>Liczba 60l worków:</p>
+                                <form onSubmit={this.handleClick}>
+                                    <select>
+                                        <option name='1'>1</option>
+                                        <option name="2">2</option>
+                                        <option name="3">3</option>
+                                        <option name="4">4</option>
+                                        <option name="5">5</option>
+                                    </select>
+                                    <label>
+                                        <button className='then-step2'>Wstecz</button>
+                                        <button type="submit" className='then-step2'>Dalej</button>
+                                    </label>
+                                </form>
                             </div>
 
 
-                        <label>
-                            <button onClick={this.handleClick} className='then-step2'>Wstecz</button>
-                            <button onClick={this.handleClick} className='then-step2'>Dalej</button>
-                        </label>
                         </div>
                     </div>
 

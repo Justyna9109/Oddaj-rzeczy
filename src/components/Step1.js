@@ -1,20 +1,16 @@
 import React, {Component} from 'react';
 
 class Step1 extends Component{
-    state={
-        step: true
-    }
     handleClick = e => {
-        this.setState({
-            step: false
-        })
-
+        e.preventDefault();
+        const data = {};
+        for (let el of e.target) {
+            data[el.name] = el.checked
+        }
+        this.props.onNext(data)
     }
     render() {
-        const step = {
-            display: this.state.step ? '' : "none"
-        }
-        return(<section style={step} className='step1'>
+        return(<section className='step1'>
 
                 <div className='yellow-step1'>
                     <h1>Ważne!</h1>
@@ -24,33 +20,35 @@ class Step1 extends Component{
                 <div className='text-step1'>
                     <div className='step1-box1'>
                     <h5>Krok 1/4</h5>
-                    <form>
+                    <form onSubmit={this.handleClick}>
                         <legend>Zaznacz co chcesz dodać:</legend>
 
                         <label> ubrania, które nadają się do ponownego użycia
-                            <input type='checkbox'/>
+                            <input name='ubrania1' type='checkbox'/>
                         </label>
 
                         <label>ubrania do wyrzucenia
-                            <input type='checkbox'/>
+                            <input name='ubrania' type='checkbox'/>
                         </label>
 
                         <label> zabawki
-                            <input type='checkbox'/>
+                            <input name='zabawki' type='checkbox'/>
                         </label>
 
                         <label> książki
-                            <input type='checkbox'/>
+                            <input name='książki' type='checkbox'/>
                         </label>
 
                         <label> Inne
-                            <input type='checkbox'/>
+                            <input name='inne' type='checkbox'/>
+                        </label>
+
+                        <label>
+                            <button type="submit" className='then-step1'>Dalej</button>
                         </label>
                     </form>
 
-                    <label>
-                        <button onClick={this.handleClick} className='then-step1'>Dalej</button>
-                    </label>
+
                     </div>
 
                     <div className='step1-box2'>
