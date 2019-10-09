@@ -11,3 +11,8 @@ Narzędzia do pracy:
 * React Router,
 * React Scroll,
 * Sass.
+
+Instructions
+* git clone https://github.com/Justyna9109/Oddaj-rzeczy.git your-project
+* open terminal in your project  npm start
+* open second terminal in data (src -> components -> data) json-server --watch function.json
