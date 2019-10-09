@@ -36,13 +36,12 @@ class Step2 extends Component {
                                         <option name="4">4</option>
                                         <option name="5">5</option>
                                     </select>
-                                    <label>
+                                    <label className='button-step2'>
                                         <button className='then-step2'>Wstecz</button>
                                         <button type="submit" className='then-step2'>Dalej</button>
                                     </label>
                                 </form>
                             </div>
-
 
                         </div>
                     </div>

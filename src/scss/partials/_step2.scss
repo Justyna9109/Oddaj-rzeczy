@@ -49,13 +49,16 @@ select {
     margin-right: 30px;
   }
 }
-.then-step2 {
+.then-step2{
   padding: 15px;
   width: 7vw;
   font-size: 15px;
   text-align: center;
-  margin-right: 30px;
+  margin-left: 30px;
   margin-top: 200px;
   border: 1px solid $color_five;
   background-color: $color_one;
+}
+.button-step2{
+  display: flex;
 }
